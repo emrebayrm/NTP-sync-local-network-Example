@@ -1,6 +1,7 @@
 #! /bin/sh
 timestamp=$(date +%u%m%d%H%M%S)
 mylog=/var/log/clock_sync.log
+
 echo "[$timestamp] - Going listen mode" >> $mylog
 #echo "[$timestamp] - \n" >> mylog
 /sbin/ip addr del 10.224.172.252/24 dev enp0s3
@@ -18,3 +19,4 @@ echo "[$timestamp] - Service restarted" >> $mylog
 echo "[$timestamp] - Host is searching ..." >> $mylog
 ntptrace >> /dev/null
 echo "[$timestamp] - Done" >> $mylog
+
