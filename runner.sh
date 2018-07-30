@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 mylog=/var/log/clock_sync.log
 clockpid=/var/run/clock_sync.pid
 
@@ -13,6 +14,7 @@ run(){
         echo "there is already running one stop it before"
         exit 0
     fi
+
 
     cp ./ntp.conf.client /etc/
     cp ./ntp.conf.server /etc/
