@@ -1,5 +1,5 @@
 #! /bin/bash
-timestamp=$(date +%u%m%d%H%M%S)
+timestamp=$(date +"%Y-%m-%d %H:%M:%S")
 mylog=/var/log/clock_sync.log
 
 echo "[$timestamp] - Going listen mode" >> $mylog
