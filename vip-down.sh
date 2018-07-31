@@ -4,7 +4,7 @@ mylog=/var/log/clock_sync.log
 
 echo "[$timestamp] - Going listen mode" >> $mylog
 #echo "[$timestamp] - \n" >> mylog
-/sbin/ip addr del 10.224.172.252/24 dev enp0s3
+/sbin/ip addr del 10.224.172.252/24 dev enp0s3 >> $mylog
 
 echo "[$timestamp] - Config file copying" >> $mylog
 mv /etc/ntp.conf /etc/ntp.conf.bckp

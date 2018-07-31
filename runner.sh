@@ -16,7 +16,7 @@ run(){
     cp ./vip-up.sh /etc/
 	stamp=$(date +"%Y-%m-%d %H:%M:%S")
 	echo "[$stamp] - starting ucarp " >> $mylog
-    ucarp --vhid=42 --pass=love --addr=10.224.172.252 --srcip=$(hostname -I) --upscript=/etc/vip-up.sh --downscript=/etc/vip-down.sh $1 -B >> $mylog 2
+    ucarp --vhid=42 --pass=love --addr=10.224.172.252 --srcip=$(hostname -I) --upscript=/etc/vip-up.sh --downscript=/etc/vip-down.sh $1 -B >> $mylog 2>&1
     sleep 1
     echo $(ps -aux |grep  ucarp | head -n 1|awk '{print $2}') >$clockpid
     stamp=$(date +"%Y-%m-%d %H:%M:%S")
