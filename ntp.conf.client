@@ -2,6 +2,7 @@
 
 driftfile /var/lib/ntp/ntp.drift
 logfile /var/log/ntp.log
+logconfig =all
 # Enable this if you want statistics to be logged.
 #statsdir /var/log/ntpstats/
 
@@ -20,7 +21,7 @@ filegen clockstats file clockstats type day enable
 #pool 2.ubuntu.pool.ntp.org iburst
 #pool 3.ubuntu.pool.ntp.org iburst
 
-server 10.224.172.252
+pool 10.224.172.252 iburst
 
 # Use Ubuntu's ntp server as a fallback.
 #pool ntp.ubuntu.com

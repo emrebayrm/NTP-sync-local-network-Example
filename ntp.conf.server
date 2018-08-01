@@ -2,6 +2,7 @@
 
 driftfile /var/lib/ntp/ntp.drift
 logfile /var/log/ntp.log
+logconfig =all
 # Enable this if you want statistics to be logged.
 #statsdir /var/log/ntpstats/
 
