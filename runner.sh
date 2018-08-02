@@ -32,11 +32,11 @@ if [ "$1" == "start" ]; then
     if [ "$2" == "master" ]; then
         stamp=$(date +"%Y-%m-%d %H:%M:%S")
 		echo "[$stamp] - Master mode " >> $mylog
-        run "-P --advskew=3 --advbase=7"
+        run "-P --advskew=3 "
     elif [ "$2" == "slave" ]; then
 	stamp=$(date +"%Y-%m-%d %H:%M:%S")
 	echo "[$stamp] - Slave mode " >> $mylog
-        run " --advskew=7 --advbase=11"
+        run " --advskew=7 "
     else
         echo " missing or wrong operator <master|slave> "
     fi
