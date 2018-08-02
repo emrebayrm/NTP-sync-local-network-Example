@@ -5,7 +5,7 @@ mylog=/var/log/clock_sync.log
 echo "[$timestamp] - Going broadcast mode" >> $mylog
 #echo "[$timestamp] - \n" >> mylog
 ntpdate -u 10.224.172.252 >> $mylog
-if [ $? -eq 0]
+if [ $? -eq 0]; then
 	echo "[$timestamp] - Look like master still awake" >> $mylog
 	exit 0
 fi
